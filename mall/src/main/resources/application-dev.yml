@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: guoshi
+    password: P@ssw0rd
+    url: jdbc:mysql://129.204.110.90:3306/mall?characterEncoding=utf8&useSSL=false
+  redis:
+    host: 129.204.110.90
+    port: 6379
+    password: xxxx
+  rabbitmq:
+    addresses: 129.204.110.90
+    port: 5672
+    username: guest
+    password: guest
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+    # 控制台日志配置
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mappers/*.xml
+
+server:
+  servlet:
+    session:
+      timeout: 120
+  port: 8080
